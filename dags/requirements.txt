@@ -1,0 +1,8 @@
+pandas
+yfinance
+requests
+tweepy
+praw
+pyspark
+sqlalchemy
+python-dotenv
