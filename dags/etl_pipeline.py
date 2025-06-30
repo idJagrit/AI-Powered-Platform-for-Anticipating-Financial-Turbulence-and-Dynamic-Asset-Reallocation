@@ -77,7 +77,7 @@ def transform_data(df, source):
 
 # Load: Save to Parquet
 def load_data(df, source):
-    output_path = f"/path/to/data/{source}/{datetime.now().strftime('%Y%m%d')}"
+    output_path = f"D:/finance/data/{source}/{datetime.now().strftime('%Y%m%d')}"
     df.write.mode("overwrite").parquet(output_path)
 
 # Main ETL function
