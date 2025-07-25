@@ -4,4 +4,5 @@ Build a scalable AI-driven system that anticipates financial turbulence using mu
 ## Team Members:
 - [Jagrit](https://github.com/idJagrit)
 - [Saumya Vaidya](https://github.com/samthedoctor)
-// 
+- [Vansh Raj Singh](https://github.com/vanshraj07)
+- [Rashi Singh](https://github.com/RashiS26)
