@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Finance Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">AI Finance <span class="ai">Advisor⚡</span></div>
+    <nav>
+      <a href="#" onclick="location.reload()">Dashboard</a>
+      <a href="/analysis">Analysis</a>
+      <a href="#">News</a>
+      <a href="#" id="ai-assistant-toggle">AI Assistant</a>
+    </nav>
+    <div class="profile" id="profile">
+      🔔 
+      <div class="avatar-container">
+        <span class="avatar">👤 <%= username %></span>
+        <div class="dropdown-menu" id="dropdown">
+          <a href="#">⚙️ Settings</a>
+          <a href="#" id="signout-btn" class="signout">↩️ Sign Out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <h1 style="color: white;">Portfolio Dashboard</h1>
+    <p class="subheading" style="color: white;">Monitor your investments and market insights</p>
+    <section class="summary-cards">
+      <div class="card">
+        <p>Total Portfolio Value</p>
+        <h2>$125,750</h2>
+      </div>
+      <div class="card green">
+        <p>Daily Change</p>
+        <h2>+ $2,450</h2>
+        <small>+1.98%</small>
+      </div>
+      <div class="card yellow">
+        <p>Risk Score</p>
+        <h2>42/100</h2>
+        <small>Medium Risk</small>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="holdings">
+        <h3>Portfolio Holdings</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Asset</th><th>Quantity</th><th>Price</th><th>Value</th><th>Change</th><th>Allocation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>AAPL</td><td>150</td><td>$182.50</td><td>$27,375</td><td class="green">+1.67%</td><td>21.8%</td></tr>
+            <tr><td>GOOGL</td><td>80</td><td>$145.20</td><td>$11,616</td><td class="green">+2.04%</td><td>9.2%</td></tr>
+            <tr><td>MSFT</td><td>120</td><td>$378.45</td><td>$45,414</td><td class="green">+1.52%</td><td>36.1%</td></tr>
+            <tr><td>TSLA</td><td>75</td><td>$245.80</td><td>$18,435</td><td class="red">-1.84%</td><td>14.7%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="news">
+        <h3>Latest Financial News</h3>
+        <div class="news-card">
+          <span class="tag red">Negative</span>
+          <p><strong>Federal Reserve Interest Rate Change</strong></p>
+          <p class="small">The Federal Reserve raised interest rates... affecting investor strategies.</p>
+          <p class="date">1/25/2025, 4:42 PM</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="ai-assistant expanded" id="assistant">
+    <button id="assistant-close" class="close-btn">✕</button>
+    <h4>AI Finance Advisor⚡Assistant</h4>
+
+    <p class="small">Advanced market analytics</p>
+    <div class="quick-actions">
+      <button>📊 Analyze my portfolio</button>
+      <button>📈 Market outlook</button>
+      <button>🧮 Compound interest</button>
+    </div>
+    <div class="assistant-body">
+      <p>Hello! I'm your AI financial assistant. I can help you with:</p>
+      <ul>
+        <li>Portfolio optimization & risk analysis</li>
+        <li>Real-time market insights</li>
+        <li>Investment recommendations</li>
+      </ul>
+      <input type="text" placeholder="Ask about investments..." />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

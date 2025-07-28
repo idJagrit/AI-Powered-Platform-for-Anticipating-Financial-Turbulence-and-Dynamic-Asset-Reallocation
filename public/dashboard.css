@@ -1,0 +1,280 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: url('dashboard.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background:  	#F0F8FF;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar a:hover {
+  color:  #008B8B;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.ai {
+  background: #13547a;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.avatar:hover {
+  color:  #008B8B;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 10px;
+  padding: 10px 0;
+  width: 150px;
+  z-index: 100;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f3f3f3;
+}
+
+.signout {
+  color: red;
+}
+
+
+.avatar {
+  margin-left: 0.5rem;
+}
+
+.dashboard {
+  padding: 2rem;
+}
+
+.subheading {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.summary-cards {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card.green {
+  border-left: 4px solid green;
+}
+
+.card.yellow {
+  border-left: 4px solid orange;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+}
+
+.holdings, .news {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.holdings {
+  flex: 3;
+}
+
+.news {
+  flex: 2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.news-card {
+  background: #fff3f3;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+}
+
+.tag.red {
+  background: #ffdddd;
+  color: #b30000;
+}
+
+.small {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.date {
+  font-size: 0.7rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+.ai-assistant {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.ai-assistant h4 {
+  margin: 0 0 0.5rem 0;
+}
+
+.quick-actions button {
+  display: block;
+  margin: 0.25rem 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: #eef1ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ai-assistant {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.ai-assistant.collapsed {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1b2b55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  content: "🤖";
+}
+
+.ai-assistant.collapsed::after {
+  content: "🤖";
+  position: absolute;
+  background-color: #1b2b55;
+  font-size: 1.8rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ai-assistant.expanded {
+  width: 400px;
+  height: 400px;
+  cursor: default;
+}
+
+.ai-assistant .assistant-body {
+  margin-top: 10px;
+  display: none;
+}
+
+.ai-assistant.expanded .assistant-body {
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+

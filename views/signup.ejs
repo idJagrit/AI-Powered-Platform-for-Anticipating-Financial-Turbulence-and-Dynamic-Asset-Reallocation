@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SignUp - AI Finance Advisor</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <% if (typeof error !== 'undefined') { %>
+    <div id="toast" class="toast">
+      <%= error %>
+      <div class="progress-bar"></div>
+    </div>
+  <% } %>
+
+  <div class="overlay">
+    <div class="signup-box">
+      <h2>SignUp</h2>
+      <form action="/signup" method="POST">
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit">SignUp</button>
+      </form>
+      <a href="/signin">Already registered? LogIn</a>
+    </div>
+  </div>
+    <script>
+    setTimeout(() => {
+      const toast = document.getElementById("toast");
+      if (toast) toast.remove();
+    }, 3500);
+  </script>
+</body>
+</html>

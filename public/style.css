@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #071823;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #a5c1cf;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: black;
+}
+
+.ai {
+  background: #13547a;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #13547a;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-outline,
+.btn-filled {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: white;
+  color: black;
+  border: none;
+}
+
+.btn-filled {
+  background: white;
+  color: black;
+  border: none;
+}
+
+.btn-filled.large {
+  margin-top: 32px;
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+main {
+  padding: 100px 20px 60px;
+  position: relative;
+}
+
+.tagline {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #80d0c7, #13547a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  margin-top: 20px;
+  color: #aaa;
+  font-size: 1rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.floating-icons .icon {
+  position: absolute;
+  width: 65px;
+  animation: float 6s infinite ease-in-out;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.features-section {
+  background-color: #f8f9fb;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #000;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-card {
+  background-color: #0a1f2d;
+  color: white;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.icon-circle {
+  font-size: 24px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.protection-section {
+  padding: 60px 20px;
+  background-color: #0a1f2d;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  color: white;
+}
+
+.protection-section .section-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.protection-section .section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.steps-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.step-card {
+  background-color: #071823;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+}
+
+.step-number {
+  width: 42px;
+  height: 42px;
+  font-size: 1rem;
+  border-radius: 50%;
+  background-color: #2962ff;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.step-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .steps-grid {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .step-card {
+    margin: 0 15px;
+  }
+}
