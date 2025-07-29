@@ -11,9 +11,11 @@ Features
 - **Market Forecasting**: Predicts 7/30/90-day trends using hybrid LSTM-CNN models with attention mechanisms.
 - **Explainability**: SHAP values and counterfactual analysis for transparency in model decisions.
 - **Interactive Dashboard**: Mobile-first UI showing risk scores, asset heatmaps, and scenario-based simulations (e.g., oil shocks, stagflation).
- ---
+ 
 ## Team Members:
 - [Jagrit](https://github.com/idJagrit)
 - [Saumya Vaidya](https://github.com/samthedoctor)
 - [Vansh Raj Singh](https://github.com/vanshraj07)
 - [Rashi Singh](https://github.com/RashiS26)
+
+---
