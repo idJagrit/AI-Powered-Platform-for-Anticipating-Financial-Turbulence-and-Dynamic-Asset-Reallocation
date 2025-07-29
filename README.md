@@ -1,6 +1,8 @@
 # AI-Powered-Platform-for-Anticipating-Financial-Turbulence-and-Dynamic-Asset-Reallocation
 ## Project Objective: 
 To build a scalable, AI-driven platform that anticipates financial turbulence using multi-source data and provides real-time, personalized asset reallocation strategies across various asset classes. This enables proactive risk management tailored to market conditions.
+
+
 Features
 - **ETL Pipeline**: Aggregates structured (market, macroeconomic, CDS) and unstructured (news, social media) financial data.
 - **Sentiment Analysis**: NLP models (BERT/FinBERT/GPT) analyze sentiment from Twitter, Reddit, and financial news sources.
