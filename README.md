@@ -72,22 +72,21 @@ Features
 <table>
   <tr>
     <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
-      <h4>1. <code>listItem</code></h4>
+      <h4>1. <code>`fetch_market_data(symbol, start, end)`</code></h4>
       <ul>
-        <li><strong>Purpose</strong>:<br>Allows owners to list items for rent.</li>
+        <li><strong>Purpose</strong>:<br>Fetch historical market data for a specific asset (stock, ETF, index).</li>
         <li><strong>Parameters</strong>:
           <ul>
-            <li><code>title </code>: Name/description of the item.</li>
-            <li><code>dailyPrice</code>: Daily Rent (in ETH).</li>
-            <li><code>image </code>: Image file of the item.</li>
+            <li><code>title </code>: `symbol` (str): Stock ticker symbol (e.g., 'AAPL')</li>
+            <li><code>dailyPrice</code>:`start` (str): Start date (format: 'YYYY-MM-DD')</li>
+            <li><code>image </code>: `end` (str): End date (format: 'YYYY-MM-DD')</li>
           </ul>
         </li>
         <li><strong>Logic</strong>:
           <ul>
-            <li>Stores the item in the <code>items</code> mapping.</li>
-            <li>Confirms the transaction with MetaMask.</li>
-            <li>Emits an <code>ItemListed</code> event.</li>
-          </ul>
+            <li>  Uses `yfinance` to download historical data (Open, High, Low, Close, Volume) between the specified dates and returns a DataFrame.</li>
+            
+ </ul>
         </li>
       </ul>
     </td>
