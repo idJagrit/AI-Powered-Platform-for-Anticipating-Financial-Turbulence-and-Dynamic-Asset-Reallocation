@@ -19,3 +19,76 @@ Features
 - [Rashi Singh](https://github.com/RashiS26)
 
 ---
+##  Key Technologies
+
+- **Frontend**: HTML, CSS, JS, Node.js, Tailwind (optionally)
+- **Backend**: Python (Flask/FastAPI), Express.js
+- **Data & ML**: PyTorch, TensorFlow, Scikit-learn, HuggingFace, Pandas, NumPy
+- **NLP Models**: FinBERT, GPT, BERT
+- **Forecasting**: LSTM, CNN, Attention Mechanisms
+- **ETL**: Apache Airflow DAGs
+- **Orchestration**: Docker, Docker Compose
+
+---
+## Prerequisites
+
+| Tool         | Version         | Notes                             |
+|--------------|------------------|------------------------------------|
+| Python       | 3.8+             | For backend and ML models          |
+| Node.js      | 16+              | For frontend and dashboard         |
+| Docker       | Latest           | For containerized orchestration    |
+| Git          | Any              | To clone the repo                  |
+| Airflow      | 2.x (optional)   | For DAG-based ETL pipelines        |
+| AlphaVantage | API Key          | Or yfinance for stock data         |
+
+---
+## Frontend Pages
+/login → Login screen with login.jpg/login.webp and signin.css
+
+/signup → User registration UI styled with signup.css
+
+/dashboard → Portfolio analysis page using dashboard.css
+
+/analysis → Forecasting and risk overview from analysis.css
+
+---
+
+
+##  Key Variables & Configurations
+
+| File                | Variable                 | Description                                                   |
+|---------------------|--------------------------|---------------------------------------------------------------|
+| `etl_pipeline.py`   | `api_key`                | Your API key for financial data (e.g., Alpha Vantage, yfinance) |
+| `etl_pipeline.py`   | `data_sources`           | URLs or endpoints to fetch raw structured/unstructured data   |
+| `etl_dag.py`        | `schedule_interval`      | Time interval for DAG execution (e.g., `@daily`, `@hourly`)   |
+| `index.js`          | `PORT`                   | Port for running the web server (default: 3000 or 5000)       |
+| `index.js`          | `APP_SECRET`             | JWT secret or session key for auth                            |
+| `.env`              | `DB_URI`, `API_KEY`, etc | Secure environment config variables                           |
+| `docker-compose.yml`| `services`               | Specifies backend/frontend service containers                 |
+
+---
+
+### Core Functions
+<table>
+  <tr>
+    <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
+      <h4>1. <code>listItem</code></h4>
+      <ul>
+        <li><strong>Purpose</strong>:<br>Allows owners to list items for rent.</li>
+        <li><strong>Parameters</strong>:
+          <ul>
+            <li><code>title </code>: Name/description of the item.</li>
+            <li><code>dailyPrice</code>: Daily Rent (in ETH).</li>
+            <li><code>image </code>: Image file of the item.</li>
+          </ul>
+        </li>
+        <li><strong>Logic</strong>:
+          <ul>
+            <li>Stores the item in the <code>items</code> mapping.</li>
+            <li>Confirms the transaction with MetaMask.</li>
+            <li>Emits an <code>ItemListed</code> event.</li>
+          </ul>
+        </li>
+      </ul>
+    </td>
+</table>
