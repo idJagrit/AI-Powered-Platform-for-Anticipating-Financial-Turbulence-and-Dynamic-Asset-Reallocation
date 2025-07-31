@@ -95,7 +95,7 @@ Features
 <table>
   <tr>
     <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
-      <h4>1. <code>etl_dag.py</code></h4>
+      <h4>2. <code>etl_dag.py</code></h4>
       <ul>
         <li><strong>Purpose</strong>:<br> Defines a scheduled workflow for automated ETL tasks using Apache Airflow.</li>
         <li><strong>Parameters</strong>:
@@ -117,7 +117,7 @@ Features
 <table>
   <tr>
     <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
-      <h4>1. <code>index.js</code></h4>
+      <h4>3. <code>index.js  -  GET/login</code></h4>
       <ul>
         <li><strong>Purpose</strong>:<br> Serve the login HTML page to the user.
 
@@ -141,7 +141,7 @@ Features
 <table>
   <tr>
     <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
-      <h4>1. <code>POST /submit</code></h4>
+      <h4>4. <code>POST /submit</code></h4>
       <ul>
         <li><strong>Purpose</strong>:<br>Authenticate a user during login.
 
@@ -165,7 +165,7 @@ Features
 <table>
   <tr>
     <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
-      <h4>1. <code>public/script.js   -  togglePassword</code></h4>
+      <h4>5. <code>public/script.js   -  togglePassword</code></h4>
       <ul>
         <li><strong>Purpose</strong>:<br> Toggle password visibility in the login form.
 
@@ -184,7 +184,7 @@ Features
 <table>
   <tr>
     <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
-      <h4>1. <code>forecast_lstm.py  -  build_forecast_model(input_shape)</code></h4>
+      <h4>6. <code>forecast_lstm.py  -  build_forecast_model(input_shape)</code></h4>
       <ul>
         <li><strong>Purpose</strong>:<br> Build and compile an LSTM-CNN model for time-series market forecasting.
 
