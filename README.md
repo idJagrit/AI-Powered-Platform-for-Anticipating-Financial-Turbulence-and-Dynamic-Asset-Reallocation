@@ -43,13 +43,13 @@ Features
 
 ---
 ## Frontend Pages
-/login → Login screen with login.jpg/login.webp and signin.css
+/login/ → Login screen with login.jpg/login.webp and signin.css
 
-/signup → User registration UI styled with signup.css
+/signup/ → User registration UI styled with signup.css
 
-/dashboard → Portfolio analysis page using dashboard.css
+/dashboard/ → Portfolio analysis page using dashboard.css
 
-/analysis → Forecasting and risk overview from analysis.css
+/analysis/ → Forecasting and risk overview from analysis.css
 
 ---
 
@@ -91,3 +91,120 @@ Features
       </ul>
     </td>
 </table>
+
+<table>
+  <tr>
+    <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
+      <h4>1. <code>etl_dag.py</code></h4>
+      <ul>
+        <li><strong>Purpose</strong>:<br> Defines a scheduled workflow for automated ETL tasks using Apache Airflow.</li>
+        <li><strong>Parameters</strong>:
+          <ul>
+            <li><code>title </code>:  None directly (Airflow handles it).</li>
+            
+   </ul>
+        </li>
+        <li><strong>Logic</strong>:
+          <ul>
+            <li>Orchestrates three tasks: data extraction, transformation, and loading. Runs daily or as defined in schedule_interval.</li>
+            
+ </ul>
+        </li>
+      </ul>
+    </td>
+</table>
+
+<table>
+  <tr>
+    <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
+      <h4>1. <code>index.js</code></h4>
+      <ul>
+        <li><strong>Purpose</strong>:<br> Serve the login HTML page to the user.
+
+</li>
+        <li><strong>Parameters</strong>:
+          <ul>
+            <li><code>title </code>:  HTTP request and response objects.</li>
+            
+   </ul>
+        </li>
+        <li><strong>Logic</strong>:
+          <ul>
+            <li>Uses Express to render login.html from the /views directory.</li>
+            
+ </ul>
+        </li>
+      </ul>
+    </td>
+</table>
+
+<table>
+  <tr>
+    <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
+      <h4>1. <code>POST /submit</code></h4>
+      <ul>
+        <li><strong>Purpose</strong>:<br>Authenticate a user during login.
+
+</li>
+        <li><strong>Parameters</strong>:
+          <ul>
+            <li><code>title </code>: email, password from the POST form body.</li>
+            
+   </ul>
+        </li>
+        <li><strong>Logic</strong>:
+          <ul>
+            <li>Extracts login credentials, validates them, and initiates a session or returns an error.</li>
+            
+ </ul>
+        </li>
+      </ul>
+    </td>
+</table>
+
+<table>
+  <tr>
+    <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
+      <h4>1. <code>public/script.js   -  togglePassword</code></h4>
+      <ul>
+        <li><strong>Purpose</strong>:<br> Toggle password visibility in the login form.
+
+</li>
+       
+  <li><strong>Logic</strong>:
+          <ul>
+            <li>Changes the type attribute of the password input between password and text.</li>
+            
+ </ul>
+        </li>
+      </ul>
+    </td>
+</table>
+
+<table>
+  <tr>
+    <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
+      <h4>1. <code>forecast_lstm.py  -  build_forecast_model(input_shape)</code></h4>
+      <ul>
+        <li><strong>Purpose</strong>:<br> Build and compile an LSTM-CNN model for time-series market forecasting.
+
+</li>
+
+<li><strong>Parameters</strong>:
+          <ul>
+            <li><code>input_shape (tuple): Shape of the input data (e.g., (30, 5) for 30 days of 5 features)</li>
+            
+   </ul>
+       
+  <li><strong>Logic</strong>:
+          <ul>
+            <li>Creates a Sequential model with an LSTM layer, a 1D CNN layer, and a Dense output layer. Compiles it with Adam optimizer and MSE loss.</li>
+            
+ </ul>
+        </li>
+      </ul>
+    </td>
+</table>
+
+
+
