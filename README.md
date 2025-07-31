@@ -184,7 +184,7 @@ Features
 <table>
   <tr>
     <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
-      <h4>1. <code>forecast_lstm.py  -  build_forecast_model(input_shape) </code></h4>
+      <h4>6. <code>forecast_lstm.py  -  build_forecast_model(input_shape) </code></h4>
       <ul>
         <li><strong>Purpose</strong>:<br>Build and compile an LSTM-CNN model for time-series market forecasting.</li>
         <li><strong>Parameters</strong>:
