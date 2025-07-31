@@ -184,27 +184,26 @@ Features
 <table>
   <tr>
     <td style ="width: 50%; vertical-align: top; padding-right: 20px;">
-      <h4>6. <code>forecast_lstm.py  -  build_forecast_model(input_shape)</code></h4>
+      <h4>1. <code>forecast_lstm.py  -  build_forecast_model(input_shape) </code></h4>
       <ul>
-        <li><strong>Purpose</strong>:<br> Build and compile an LSTM-CNN model for time-series market forecasting.
-
+        <li><strong>Purpose</strong>:<br>Build and compile an LSTM-CNN model for time-series market forecasting.</li>
+        <li><strong>Parameters</strong>:
+          <ul>
+            <li><code>title </code>:input_shape (tuple): Shape of the input data (e.g., (30, 5) for 30 days of 5 features)</li>
+            </ul>
+        </li>
+        <li><strong>Logic</strong>:
+          <ul>
+            <li>  Creates a Sequential model with an LSTM layer, a 1D CNN layer, and a Dense output layer. Compiles it with Adam optimizer and MSE loss.
 </li>
-
-<li><strong>Parameters</strong>:
-          <ul>
-            <li><code>input_shape (tuple): Shape of the input data (e.g., (30, 5) for 30 days of 5 features)</li>
-            
-   </ul>
-       
-  <li><strong>Logic</strong>:
-          <ul>
-            <li>Creates a Sequential model with an LSTM layer, a 1D CNN layer, and a Dense output layer. Compiles it with Adam optimizer and MSE loss.</li>
             
  </ul>
         </li>
       </ul>
     </td>
 </table>
+
+   
 
 
 
