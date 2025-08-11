@@ -2,7 +2,6 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import path from "path";
-import '../styles/analysis.css';
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 dotenv.config();
