@@ -11,5 +11,8 @@
     "postgres": "^3.4.7",
     "supabase": "^2.31.8"
   },
-  "type": "module"
+  "type": "module",
+  "scripts": {
+  "dev": "node index.js"
+}
 }
