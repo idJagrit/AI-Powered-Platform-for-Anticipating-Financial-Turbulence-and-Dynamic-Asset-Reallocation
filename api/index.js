@@ -23,11 +23,12 @@ const db = new pg.Client({
 db.connect();
 
 const app = express();
+const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "../views"));
 
 app.get("/", (req, res) => {
   res.render("index");
@@ -81,6 +82,13 @@ app.get('/analysis', (req, res) => {
   const username = req.query.username;
   res.render('analysis', { username });
 });
+
+
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+
 
 export default app;
 
