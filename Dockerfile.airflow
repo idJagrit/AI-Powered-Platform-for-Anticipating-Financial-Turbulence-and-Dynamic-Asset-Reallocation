@@ -1,0 +1,14 @@
+FROM apache/airflow:2.9.0-python3.10
+
+# Install extra Python libs
+RUN pip install --no-cache-dir \
+    pyspark \
+    boto3 \
+    s3fs \
+    newsapi-python \
+    tweepy \
+    praw \
+    psycopg2-binary \
+    minio \
+    fredapi \
+    yfinance

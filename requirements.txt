@@ -1,0 +1,14 @@
+streamlit>=1.20
+boto3>=1.26
+botocore>=1.29
+transformers>=4.30
+torch>=1.13    # CPU-only install is fine; if you have GPU but want CPU-only, set device=-1 in pipeline
+sentence-transformers>=2.2.2  # optional, for future clustering
+pandas
+matplotlib
+numpy
+minio
+scikit-learn 
+plotly
+seaborn
+wordcloud
