@@ -20,26 +20,22 @@ const db = new pg.Client({
   }
 });
 
-const app = express();
-const port = 3000;
-
 db.connect();
+
+const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-
 app.get("/", (req, res) => {
   res.render("index");
 });
 
-
 app.get("/signup", (req, res) => {
   res.render("signup");
 });
-
 
 app.post("/signup", async (req, res) => {
   const { username, password } = req.body;
@@ -56,7 +52,6 @@ app.post("/signup", async (req, res) => {
     res.status(500).send("Database error during signup.");
   }
 });
-
 
 app.get("/signin", (req, res) => {
   res.render("signin");
@@ -87,7 +82,4 @@ app.get('/analysis', (req, res) => {
   res.render('analysis', { username });
 });
 
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+export default app;
