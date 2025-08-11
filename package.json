@@ -13,6 +13,7 @@
   },
   "type": "module",
   "scripts": {
-  "dev": "node index.js"
+  "dev": "node api/index.js",
+  "build": "echo 'No build step defined. Add bundler or transpiler here if needed.'"
 }
 }
